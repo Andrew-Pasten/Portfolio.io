@@ -60,24 +60,23 @@
 									<html>
 										<head>
 											<style>
-    .center-iframe {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden; /* Updated to hide parts of the iframe that overflow */
-    }
-    .center-iframe iframe {
-        width: 100%; /* Make width responsive */
-        height: 400px; /* Set a default height, you can adjust this value */
-        /* Removed scaling and margin adjustments for mobile responsiveness */
-    }
-    @media (min-width: 768px) {
-        /* For larger screens, adjust as necessary */
-        .center-iframe iframe {
-            height: 780px; /* Adjust height for larger screens */
+        .center-iframe {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 200%; /* Ensure the container takes full width */
+            overflow: visible; /* Hide the parts of the iframe that overflow due to scaling */
         }
-    }
-</style>
+        .center-iframe iframe {
+            width: 91.5em; /* Increase width to compensate for scaling */
+            height: 780px; /* Increase height to compensate for scaling */
+            transform: scale(.75); /* Scale down to 83.3%, adjust as needed */
+            transform-origin: 0 0; /* Adjust the origin of transformation */
+            /* Adjust margin to re-center the iframe */
+            margin-left: -420px;
+            margin-right: 100px;
+			 }
+    </style>
 
 </head>
 <body>
